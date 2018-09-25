@@ -36,9 +36,9 @@ public class DetailActivity extends AppCompatActivity {
         heroTopAbility.setText(detail.getTop_attribute());
 
         img = (ImageView)findViewById(R.id.hero_image);
-        Glide.with(context)
-                .load(detail.getImage())
-                .crossFade()
-                .into(img);
+//        Glide.with(context)
+//                .load(detail.getImage())
+//                .crossFade()
+//                .into(img);
     }
 }
