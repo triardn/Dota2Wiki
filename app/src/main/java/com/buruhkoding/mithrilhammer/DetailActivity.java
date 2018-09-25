@@ -24,6 +24,7 @@ public class DetailActivity extends AppCompatActivity {
         detail = null;
         detail = HeroData.getHeroDetail(Integer.valueOf(position));
 
+        getSupportActionBar().setTitle(detail.getName());
         heroName = (TextView)findViewById(R.id.hero_name);
         heroName.setText(detail.getName());
         heroTitle = (TextView)findViewById(R.id.hero_title);
@@ -36,9 +37,9 @@ public class DetailActivity extends AppCompatActivity {
         heroTopAbility.setText(detail.getTop_attribute());
 
         img = (ImageView)findViewById(R.id.hero_image);
-//        Glide.with(context)
-//                .load(detail.getImage())
-//                .crossFade()
-//                .into(img);
+        Glide.with(this)
+                .load(detail.getImage())
+                .crossFade()
+                .into(img);
     }
 }
